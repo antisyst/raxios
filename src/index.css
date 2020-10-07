@@ -1,13 +1,140 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #0e153a;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.brand {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 18px 0;
+}
+
+.search {
+  height: 10px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: #0e153a;
+  border: 0.5px solid #124faa;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.movie_component {
+  border-radius: 8px;
+  width: 250px;
+  margin: 15px;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 22px -3px rgba(0, 0, 0, 1);
+  background-color: #0e153a;
+}
+
+.poster {
+  max-width: 100%;
+  height: 375px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+.score {
+  border: 1px solid;
+  padding: 10px;
+  width: 20px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+}
+
+.movie-info {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  color: black;
+  background-color: #0e153a;
+  color: white;
+}
+
+.header {
+  position: relative;
+}
+
+.hover-info {
+  background-color: rgba(17, 17, 17, 0.863);
+  padding: 0 5px;
+  max-height: 100%;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.5s;
+}
+
+.movie_component:hover .hover-info {
+  transform: translateY(0%);
+}
+
+.tag {
+  border-radius: 50%;
+  width: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.tag.green {
+  background-color: green;
+}
+
+.tag.red {
+  background-color: red;
+}
+
+.tag.orange {
+  background-color: orange;
+}
+
+.footer {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.tmdbLogo {
+  height: 12px;
 }
