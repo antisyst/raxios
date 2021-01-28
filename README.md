@@ -26,3 +26,5 @@ In the project directory, you can run:
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4da1fb1c-d07b-44c2-a14f-cf8a1d812cd1/deploy-status)](https://app.netlify.com/sites/movie-search-react-2020/deploys)
