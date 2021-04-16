@@ -12,13 +12,13 @@ const App = () => {
     )
   }, [])
 
-  const getMovies = API => {
+  const getMovies = (API) => {
     fetch(API)
-      .then(res => res.json())
-      .then(data => setMovies(data.results))
+      .then((res) => res.json())
+      .then((data) => setMovies(data.results))
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     console.log(searchTerm)
     if (searchTerm !== '') {
       getMovies(
@@ -31,13 +31,13 @@ const App = () => {
     e.preventDefault()
   }
 
-  const handleChange = e => setSearchTerm(e.target.value)
+  const handleChange = (e) => setSearchTerm(e.target.value)
 
   return (
     <>
       <nav className="nav">
         <a href="./" className="brand">
-          Movies Finder
+          Movies Finder 2.0
         </a>
         <form onSubmit={handleSubmit}>
           <input
@@ -52,7 +52,7 @@ const App = () => {
 
       <div className="container">
         {movies.length > 0 &&
-          movies.map(movie => <Movie {...movie} key={movie.id} />)}
+          movies.map((movie) => <Movie {...movie} key={movie.id} />)}
       </div>
       <Footer />
     </>
