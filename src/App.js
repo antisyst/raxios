@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Movie from './components/Movie'
-import Footer from './components/layouts/Footer'
+import Footer from './components/layouts/Footer';
+import MainLogo from './logo';
 
 const App = () => {
   const [movies, setMovies] = useState([])
@@ -8,7 +9,7 @@ const App = () => {
 
   useEffect(() => {
     getMovies(
-      `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${process.env.REACT_APP_API_KEY}&page=1`
+      `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=7b2c78a6737d76ebd4d10c90672e1adb&page=1`
     )
   }, [])
 
@@ -22,7 +23,7 @@ const App = () => {
     console.log(searchTerm)
     if (searchTerm !== '') {
       getMovies(
-        `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=` +
+        `https://api.themoviedb.org/3/search/movie?api_key=7b2c78a6737d76ebd4d10c90672e1adb&query=` +
           searchTerm
       )
       setSearchTerm('')
@@ -37,7 +38,7 @@ const App = () => {
     <>
       <nav className="nav">
         <a href="./" className="brand">
-          Movies Finder 2.0
+         <MainLogo/>
         </a>
         <form onSubmit={handleSubmit}>
           <input

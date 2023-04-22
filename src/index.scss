@@ -1,9 +1,10 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  padding: 0;
+  background: #000;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
+  user-select: none;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -14,51 +15,70 @@ code {
 
 .nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-color: #0e153a;
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(10px);
   margin-bottom: 20px;
   color: white;
+  padding: 10px 6%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 90%;
 }
-
+.nav svg {
+  width: 75px;
+}
 .brand {
   text-decoration: none;
   color: white;
   font-size: 25px;
   font-weight: bold;
-  padding: 18px 0;
+  display: flex;
+  flex-direction: row;
+  user-select: none;
+  align-items: center;
 }
 
 .search {
-  height: 10px;
   padding: 10px 20px;
+  outline: none;
   border-radius: 15px;
-  background-color: #0e153a;
-  border: 0.5px solid #124faa;
+  height: 29px;
+  background: rgba(18, 18, 18, 0.5);
+  border: 2px solid #124faa;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: bold;
   color: white;
+  font-size: 17px;
+  width: 300px;
 }
 
 .container {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 120px;
   flex-wrap: wrap;
 }
 
 .movie_component {
   border-radius: 8px;
-  width: 250px;
-  margin: 15px;
+  width: 300px;
+  margin: 7px;
   background-color: white;
   overflow: hidden;
+  border: 1.4px solid #124faa;
   position: relative;
   box-shadow: 0px 0px 22px -3px rgba(0, 0, 0, 1);
-  background-color: #0e153a;
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .poster {
   max-width: 100%;
-  height: 375px;
+  height: 380px;
+  width: 100%;
   object-fit: cover;
   border-radius: 8px 8px 0 0;
 }
@@ -70,15 +90,21 @@ code {
   text-align: center;
   font-size: 16px;
 }
-
+.footer {
+  color: #ffff;
+}
+.footer a {
+  color: #ffff;
+}
 .movie-info {
   font-size: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 84px;
   padding: 0 1rem;
   color: black;
-  background-color: #0e153a;
+  background-color: rgba(18, 18, 18, 0.8);
   color: white;
 }
 
@@ -114,7 +140,7 @@ code {
 }
 
 .tag.green {
-  background-color: green;
+  background-color: #124faa;
 }
 
 .tag.red {
@@ -131,10 +157,51 @@ code {
 }
 
 .footer a {
-  text-decoration: none;
-  color: black;
+  color: #fff;
 }
 
 .tmdbLogo {
   height: 12px;
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0;
+    flex-wrap: wrap;
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+    color: white;
+    padding: 10px 6%;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    width: 90%;
+  }
+  .search {
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 15px;
+    height: 29px;
+    background: rgba(18, 18, 18, 0.5);
+    border: 2px solid #124faa;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 17px;
+    width: 300px;
+  }
+  .nav svg {
+    width: 50px;
+  }
 }
